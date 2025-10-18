@@ -1,0 +1,129 @@
+:root {
+    --clr-primary-400: hsl(158, 36%, 37%);
+    --clr-primary-700: hsl(158, 42%, 18%);
+
+    --clr-neutral-900: hsl(212, 21%, 14%);
+    --clr-neutral-400: hsl(228, 12%, 48%);
+    --clr-neutral-200: hsl(30, 38%, 92%);
+    --clr-neutral-100: hsl(0, 0%, 100%);
+
+    --fw-regular: 500;
+    --fw-bold: 700;
+
+    --ff-base: "Montserrat", sans-serif;
+    --ff-accent: "Fraunces", serif;
+}
+
+/* reset */
+
+*, 
+*::before, 
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+html,
+body {
+    height: 100vh;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* general styling */
+
+body {
+    font-family: var(--ff-base);
+    font-weight: var(--fw-regular);
+    font-size: 0.875rem;
+    color: var(--clr-neutral-400);
+    background-color: var(--clr-neutral-200);
+    line-height: 1.5;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.c-product-preview-card {
+    background-color: var(--clr-neutral-100);
+    border-radius: 0.5rem;
+    overflow: hidden;
+
+    max-width: 37.5rem;
+}
+
+@media (min-width: 768px) {
+    .c-product-preview-card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.c-product-preview-card__text-box {
+    padding: 2rem;
+
+    display: grid;
+    gap: 1.25rem;
+}
+
+.c-product-preview-card__category {
+    font-size: 0.75rem;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+}
+
+.c-product-preview-card__title {
+    font-family: var(--ff-accent);
+    font-size: 2rem;
+    font-weight: var(--fw-bold);
+    color: var(--clr-neutral-900);
+    line-height: 1;
+}
+
+
+.c-product-preview-card__price-box {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.c-product-preview-card__price {
+    font-family: var(--ff-accent);
+    font-size: 2rem;
+    font-weight: var(--fw-bold);
+    color: var(--clr-primary-400);
+}
+
+.button {
+    padding: 0.750rem 0;
+
+    background-color: var(--clr-primary-400);
+
+    border: none;
+    border-radius: 0.5rem;
+
+    font-weight: var(--fw-bold);
+    color: var(--clr-neutral-100);
+
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: var(--clr-primary-700);
+    cursor: pointer; 
+}
